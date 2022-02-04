@@ -1,2 +1,3 @@
-# Usabilidad y Experiencia de usuarios para personas con discapacidad
-##  Master en gestión de contenidos digitales
+# Apuntes de la asignatura de Usabilidad y Experiencia de Usuarios para Usuarios con Discapacidad
+## Máster en Gestión de Contenidos Digitales
+
