@@ -1298,7 +1298,8 @@ Define más de 200 requisitos y recomendaciones. Para cada requisito explica en 
 
 
 .column-left[
-<p><a href="https://olgacarreras.blogspot.com/2018/11/libro-accesibilidad-web-wcag-21-de.html"><img src="images/WCAG21DeFormaSencilla.png" width="40%" alt="Portada libro Accesibilidad web. WCAG 2.1 de forma sencilla" /></a></p>
+<p><a href="https://olgacarreras.blogspot.com/2018/11/libro-accesibilidad-web-wcag-21-de.html
+"><img src="images/WCAG21DeFormaSencilla.png" width="40%" alt="Portada libro Accesibilidad web. WCAG 2.1 de forma sencilla" /></a></p>
 
 <p><a href="https://observatoriodelaaccesibilidad.es/wp-content/uploads/2020/06/Accesibilidad-web.pdf"><img src="images/GuiaTodoEnUno.png" width="40%" alt="Portada libro Guía todo en uno sobre la accesibilidad web en España" /></a></p>]
 
@@ -1508,7 +1509,7 @@ name:tema3.3
   + Usuarios con discapacidades cognitivas,
       + Pero atención al déficit de atención o a ritmos impuestos
   + Usuarios sordos signistas (vídeos de signos).
-+ Hacer un vídeo accesible <em>tiene un coste elevado</em>
++ Hacer un vídeo accesible requiere planificación. Transformalo una vez creado <em>tiene un coste elevado</em>
 ---
 ## Soluciones
 
@@ -1540,6 +1541,32 @@ name:tema3.3
   + Reproductor accesible, como por ejemplo [AblePlayer](https://ableplayer.github.io/ableplayer/)
 
 ---
+## Soluciones (IV)
+
+Las soluciones que hemos visto benefician también a otros muchos usuarios:
+
+  + Uso en entornos ruidosos
+  + Acceso directo a una parte del vídeo gracias a los subtítulos
+  + Búsqueda y mejora de la recuperación y SEO
+  + Pronunciación y aprendizaje de lenguas
+
+---
+## Tipos de documentos y requisitos
+
++ Documentos solo audio
+  + Transcripción
++ Documentos solo vídeo (sin audio)
+  + Transcripción
+  + Alternativa en audio (Audiodescripción)
++ Documentos de vídeo
+  + En directo
+    + Subtitulado
+  + En diferido (pregrabado)
+    + Subtitulado
+    + Transcripción
+    + Audiodescripción
+
+---
 ## Posibles escenarios de autoría
 
 + Amateur
@@ -1554,13 +1581,21 @@ name:tema3.3
 ---
 ## Legislación y normativas (I)
 
++ [Accesometer](https://mapaccess.uab.cat/accessometer?language=es)
 + 21st Century Communications and Video Accessibility Act (CVAA)
 + Real Decreto 1112/2018,  7 de septiembre
 + UNE 139803:2012
 + WCAG 2.1 
-  + Reproductor accesible
-  + Subtítulos
-  + Audiodescripción
+  + Vídeo o Audio solamente, pregrabados
+    + Alternativa accesible (1.2.1 A)
+  + Vídeo (imagen + audio) pregrabados
+    + Subtítulos (1.2.2 A)
+    + Audiodescripción o alternativa (1.2.3 A) [transcripción]
+    + Audiodescripción (1.2.5 AA)
+    + <style color="yellow">Lengua de signos (1.2.6 AAA)</style>
+  + Vídeo (Imagen + audio) en directo
+	+ Subtítulos (1.2.4 AA)
+	+ Reproductor accesible
 
 ---
 ## Legislación y normativas (II)
@@ -1573,8 +1608,63 @@ name:tema3.3
 + Audiodescripción
   + UNE 153020:2005 Audiodescripción para personas con discapacidad visual
 ---
+## Transcripción
+
+Consiste en ofrecer el texto de los diálogos, voces en off y otros elementos contextuales de forma paralela a la grabación vídeo. Es la técnica más simple, resuelve el acceso a la información y no supone una gran dificultad técnica.
+
+Se recomienda publicarla en texto plano o HTML para evitar barreras de formato.
+
+---
+## ¿Qué incluir en la transcripción? (1)
+
++ Sólo audio:
+	+ Identificación de los hablantes
+	+ Contenido diálogos
+	+ Eventos sonoros: música, risa, aplausos, efectos especiales
+	+ Cualquier otro elemento sonoro relevante para la comprensión del contenido
+
++ Sólo vídeo
+	+ Descripción acciones
+	+ Descripción personas
+	+ Descripción expresiones corporales
+	+ Descripción escenarios y localizaciones
+	+ Transcribir textos que se muestren en pantalla
+	+ Cualquier otro elemento visual relevante para la comprensión del contenido
+
+---
+## ¿Qué incluir en la transcripción? (2)
+
++ Vídeos con sonido
+	+ Contenido audio:
+		+ Identificación de los hablantes
+		+ Contenido diálogos
+		+ Eventos sonoros: música, risa, aplausos, efectos especiales
+		+ Cualquier otro elemento sonoro relevante para la comprensión del contenido
+	+ Contenido visual
+		+ Descripción acciones
+		+ Descripción personas
+		+ Descripción expresiones corporales
+		+ Descripción escenarios y localizaciones
+		+ Transcribir textos que se muestren en pantalla
+		+ Cualquier otro elemento visual relevante para la comprensión del contenido
+
+---
+## Subtitulado: tipos de subtítulos
+
++ Subtítulos de idioma (subtitles) y subtítulos para personas sordas (captions)
+
+	+ Los subtítulos para personas sordas deben incluir toda la información sonora del vídeo, no solo los diálogos:
+		+ Identificación de los hablantes
+		+ Contenido diálogos
+		+ Eventos sonoros: música, risa, aplausos, efectos especiales
+		+ Cualquier otro elemento sonoro relevante para la comprensión del contenido
+
++ Cerrados (closed captions - CC) y abiertos (open captions)
+
+---
 ## Subtitulado (I) UNE 153010:2012
 
++ Fieles y sincronizados
 + Colores adecuados y con suficiente contraste
 + Solo 2 líneas. 37 caracteres como máximo. Cada personaje en una línea
 
@@ -1611,7 +1701,38 @@ name:tema3.3
 + Usar pronombres y formas cortas de ubicaciones y personalidades
 
 ---
+## Subtítulos automáticos (ASR)
+
+Cada vez más frecuentes en diversas plataformas: 
++ Presentación PowerPoint
++ Microsoft Teams
++ Zoom
++ ...
+
+Principalmente en lenguas mayoritarias: ingles, castellano, chino
+
+Algunos requisitos:
++ Sólo un narrador
++ Sin errores (guion escrito)
++ Micrófonos de alta calidad
++ Sin ruido de fondo
+
+Observar: ¿se graban? ¿se pueden editar? ¿qué calidad ofrecen?
+
+---
+## Formatos de subtítulos
+
++ [Web VTT](https://web.dev/media-accessibility/): es el formato por excelencia, permite colores, posicionamiento… Con [soporte en muchos navegadores](https://caniuse.com/webvtt)
+
++ SRT: el formato más adoptado y simple
+
++ [Conversor online](https://gotranscript.com/subtitle-converter)
+
+
+---
 ## Audiodescripción
+
+[Ejemplos en español](https://pagines.uab.cat/viw/content/spanish-audio-descriptions)
 
 + Pista de audio adicional para describir personajes y acciones claves
 + Saca provecho de los silencios en el diálogo
@@ -1620,6 +1741,319 @@ name:tema3.3
 + Incluye créditos 
 
 <img src="images/procesoAudiodescripcion.png" width="100%" alt="Análisis de la obra. Creción del guión. Revisión y corrección del guión. Locución. Montaje de la obra. Revisión del producto">
+
+---
+## ¿Qué incluir en la audiodescripción?
+
++ Descripción acciones
++ Descripción personas
++ Descripción expresiones corporales
++ Descripción escenarios y localizaciones
++ Lectura de los textos que se muestren en pantalla
++ Cualquier otro elemento visual relevante para la comprensión del contenido
+
+---
+## Consejos para la audiodescripción
+
++ Narra el texto
+	+ Asegúrate de narrar todo el texto importante que aparece en pantalla
++ Presenta siempre
+	+ Si aparecen personas nuevas en el vídeo, que se presenten en el momento de aparición con su nombre y cargo
++ Describe las escenas que no tienen audio
++ No avances sucesos de la trama
++ No transmitas un punto de vista subjetivo
++ Revisa: “Mira” los vídeos que has creado con los ojos cerrados
+
+---
+## Para saber más
+
++ [Description key](https://dcmp.org/learn/descriptionkey)
+
+---
+## Interpretación en lengua de signos
+### Conceptos básicos
+
+La interpretación en lengua de signos no es un requisito legal pero es muy importante para algunos usuarios.
+
+Existe una lengua de signos específica para el catalán y una para el  español, otra para inglés británico y aún otra para el inglés americano…
+
+El intérprete debe poder verse con suficiente calidad, idealmente en una pantalla propia, a 25 fps, 240 kbps y 256 x 192 píxeles como requisitos mínimos.
+
+La interpretación debe incluir
++ Los diálogos y contenido oral
++ Los eventos sonoros relevantes: música, aplausos, efectos especiales...
+
+El intérprete debe vestir con un color uniforme y que contraste con su color de piel, sin adornos ni distracciones.
+
+---
+## Reproductor
+### Requisitos
+
+Acceso por teclado y botones con texto alternativo
+
+Controles específicos para subtítulos, 
+
+Audiodescripción y Lengua de signos, transcripción
+
+Soporte a VTT
+
+[Comparación de algunos reproductores actuales](http://kensgists.github.io/apt/)
++ AblePlayer y videojs son los más accesibles, ambos son de software libre
++ AblePlayer está traducido al castellano y al catalán (por el grupo Adaptabit)
+
+---
+## Vídeo en HTML: código HTML para incluir subtítulos y audiodescripciones
+
+~~~
+<video controls>
+<source src=“xxx.webm" type="video/webm" />
+<source src=“xxx.mp4" type="video/mp4" />
+<track src=“xxx.vtt" label="English captions" kind="captions" srclang="en" default>
+<track src=“xxx.vtt" label="中文字幕" kind="captions" srclang="zh">
+<p>Este navegador no da soporte al elemento vídeo.</p>
+</video> 
+~~~
+
+Kind = captions, subtitles, descriptions, chapters
+
+(mirar Guía Internet)
+
+---
+## Etapas en la creación de un vídeo
+
+Planificación
++ Objetivo
++ Cronograma del proceso
++ Viabilidad
++ Guion
+Producción
++ Obtención de imágenes y sonido. Cuidar calidad
++ Montar vídeo con recursos de accesibilidad.
+Difusión
++ Versiones
++ Reproductor accesible
+
+---
+##  Planificación (1)
+
+Sinopsis argumental: planteamiento, nudo y desenlace (100 a 500 palabras)
+
+Guion técnico:
+
+| Secuencia plano | Vídeo                                                          | Audio                                                                         | Tiempo plano | Tiempo total |
+|-----------------|----------------------------------------------------------------|-------------------------------------------------------------------------------|--------------|--------------|
+| 3.1             | Dos personas halando mediante lengua de signos                 | “Pero el acceso al contenido aún no es universal…”                            | 6´´          | 1´02´´       |
+| 3.2             | Persona mayor mirando con atención la pantalla de un ordenador | “… ya que en su concepción y diseño no se tiene en cuenta toda la población…” | 9´´          | 1´11´´       |
+---
+## Planificación (2)
+
+Para accesibilidad se recomienda hacer un guión técnico más detallado:
+
+| Secuencia plano | Plano (vídeo)                   | <style type="text/css">
+.tg  {border-collapse:collapse;border-spacing:0;}
+.tg td{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+  overflow:hidden;padding:10px 5px;word-break:normal;}
+.tg th{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+  font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
+.tg .tg-0pky{border-color:inherit;text-align:left;vertical-align:top}
+</style>
+<table class="tg">
+<thead>
+  <tr>
+    <th class="tg-0pky">Secuencia plano</th>
+    <th class="tg-0pky">Plano (vídeo)</th>
+    <th class="tg-0pky">Contenido / Acción (vídeo)</th>
+    <th class="tg-0pky">Diálogo (audio)</th>
+    <th class="tg-0pky">Voz en off (audio)</th>
+    <th class="tg-0pky">Banda sonora (audio)</th>
+    <th class="tg-0pky">Tiempo plano</th>
+    <th class="tg-0pky">Tiempo total</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td class="tg-0pky">3.1</td>
+    <td class="tg-0pky">Plano conjunto</td>
+    <td class="tg-0pky">Dos personas conversan mediante lengua de signos. Exterior, ante la entrada de la Facultad</td>
+    <td class="tg-0pky"  colspan="3">(voz en off – narrador) “Pero el acceso a los contenidos todavía no es universal…”</td>
+    <td class="tg-0pky">6´´</td>
+    <td class="tg-0pky">1´02´´</td>
+  </tr>
+  <tr>
+    <td class="tg-0pky">3.2</td>
+    <td class="tg-0pky">Plano medio. Travelín de avance</td>
+    <td class="tg-0pky">Persona mayor mirando con atención la pantalla de un ordenador.Interior, despacho.</td>
+    <td class="tg-0pky"  colspan="3">[Voz en off – narrador] “… ya que en su concepción y diseño no se tiene en cuenta a toda la población…”</td>
+    <td class="tg-0pky">9´´</td>
+    <td class="tg-0pky">1´11´´</td>
+  </tr>
+  <tr>
+    <td class="tg-0pky">3.3</td>
+    <td class="tg-0pky">Plano medio largo</td>
+    <td class="tg-0pky">Persona de otro contexto cultural viendo un video en una lengua diferente a la suya. Interior, despacho</td>
+    <td class="tg-0pky" colspan="3">[Voz en off – narrador] “… más allá de sus condiciones, pueda disfrutar de los contenidos”.</td>
+    <td class="tg-0pky">8´´</td>
+    <td class="tg-0pky">1´19´´</td>
+  </tr>
+  <tr>
+    <td class="tg-0pky">3.4</td>
+    <td class="tg-0pky">Primer plano</td>
+    <td class="tg-0pky">Manos leyendo un texto escrito en Braille. [Fundido en negro]</td>
+    <td class="tg-0pky"  colspan="3">Banda sonora [Disminución del volumen en paralelo al fundido]</td>
+    <td class="tg-0pky">6´´</td>
+    <td class="tg-0pky">1´25´´</td>
+  </tr>
+</tbody>
+</table>
+---
+## Planificación con subtítulos y audiodescripción (3)
+
+<style type="text/css">
+.tg  {border-collapse:collapse;border-spacing:0;}
+.tg td{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:12px;
+  overflow:hidden;padding:10px 5px;word-break:normal;}
+.tg th{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+  font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
+.tg .tg-0pky{border-color:inherit;text-align:left;vertical-align:top}
+</style>
+<table class="tg">
+<thead>
+  <tr>
+    <th class="tg-0pky">Secuencia plano</th>
+    <th class="tg-0pky">Plano (vídeo)</th>
+    <th class="tg-0pky">Contenido / Acción (vídeo)</th>
+    <th class="tg-0pky">Subtítulos</th>
+    <th class="tg-0pky">Diálogo (audio)</th>
+    <th class="tg-0pky">Voz en off (audio)</th>
+    <th class="tg-0pky">Banda sonora (audio)</th>
+    <th class="tg-0pky">Audiodescripción</th>
+    <th class="tg-0pky">Tiempo plano</th>
+    <th class="tg-0pky">Tiempo total</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td class="tg-0pky">3.1</td>
+    <td class="tg-0pky">Plano conjunto</td>
+    <td class="tg-0pky">Dos personas conversan mediante lengua de signos. Exterior, ante la entrada de la Facultad</td>
+    <td class="tg-0pky">Voz en off</td>
+    <td class="tg-0pky"  colspan="3">(voz en off – narrador) “Pero el acceso a los contenidos todavía no es universal…”</td>
+    <td class="tg-0pky" rowspan="3">Conversación en lengua de signos y persona mayor mirando una pantalla de ordenador</td>
+    <td class="tg-0pky">6´´</td>
+    <td class="tg-0pky">1´02´´</td>
+  </tr>
+  <tr>
+    <td class="tg-0pky">3.2</td>
+    <td class="tg-0pky">Plano medio. Travelín de avance</td>
+    <td class="tg-0pky">Persona mayor mirando con atención la pantalla de un ordenador.Interior, despacho.</td>
+    <td class="tg-0pky">Voz en off</td>
+    <td class="tg-0pky"  colspan="3">[Voz en off – narrador] “… ya que en su concepción y diseño no se tiene en cuenta a toda la población…”</td>
+    <td class="tg-0pky">9´´</td>
+    <td class="tg-0pky">1´11´´</td>
+  </tr>
+  <tr>
+    <td class="tg-0pky">3.3</td>
+    <td class="tg-0pky">Plano medio largo</td>
+    <td class="tg-0pky">Persona de otro contexto cultural viendo un video en una lengua diferente a la suya. Interior, despacho</td>
+    <td class="tg-0pky">Voz en off</td>
+    <td class="tg-0pky" colspan="3">[Voz en off – narrador] “… más allá de sus condiciones, pueda disfrutar de los contenidos”.</td>
+    <td class="tg-0pky">8´´</td>
+    <td class="tg-0pky">1´19´´</td>
+  </tr>
+  <tr>
+    <td class="tg-0pky">3.4</td>
+    <td class="tg-0pky">Primer plano</td>
+    <td class="tg-0pky">Manos leyendo un texto escrito en Braille. [Fundido en negro]</td>
+    <td class="tg-0pky">Música</td>
+    <td class="tg-0pky"  colspan="3">Banda sonora [Disminución del volumen en paralelo al fundido]</td>
+    <td class="tg-0pky"></td>
+    <td class="tg-0pky">6´´</td>
+    <td class="tg-0pky">1´25´´</td>
+  </tr>
+</tbody>
+</table>
+
+---
+## Algunos consejos específicos
+
++ Prever más tiempo
++ Facilitar lectura labial
+
+---
+## Pasos con Youtube y Cadet
+
+---
+## Esquema de trabajo subtitulado (1a, YouTube)
+
+Subtitulación – Obtención fichero inicial
++ Transcripción – Segmentación – División 
+	+ Codificado en UTF-8, usar Notepad++ o similar para controlar el número de carácteres
++ 2 versiones: 
+	+ Original: Mantener
+	+ Versión per Youtube: Sacar efectos sonoros, información contextual y etiquetas
++ Subir vídeo a Youtube
++ Subir división
++ Dejar que se sincronice solo (buenos resultados en español e inglés)
++ Acabar de ajustar tiempos en Youtube. Entradas y salidas ajustadas y sincronizadas.
++ Descargar fichero de Youtube
+
+---
+## Esquema de trabajo subtitulado(1b, Cadet)
+
+Subtitulación – Obtención fichero inicial
++ Transcripción – Segmentación – División 
+	+ Codificado en UTF-8, usar Notepad++ o similar para controlar el número de carácteres
++ Subir vídeo a Cadet (mirar en tools - preferences, que busque en la carpeta correcta)
++ Rellenar las celdas con los textos de la división
++ Sincronizar manualmente 
+	+ Se recomienda bajar la velocidad de reproducción del vídeo
+	+ Mirar opciones del menú “play” y configurar que se visualizen los subtítulos
++ Descargar fichero de Cadet
+
+---
+## Esquema de trabajo subtitulado(2)
+
+Subtitulación – Traducciones
++ Si es necesario crear subtítulos en otros idiomas y cargarlos en Youtube
+	+ Solo cambiar el texto (incluso usando herramientas de traducción automáticas)
+	+ Cuando se suba indicar a qué idioma corresponden
+
+---
+## Esquema de trabajo subtitulado(3)
+
+Subtitulación – Colores o posicionamiento
+
++ Convertir subtitulos de Youtube a WebVTT con un conversor online, por ejemplo https://gotranscript.com/subtitle-converter. Si los subtítulos provienen de Cadet no es necesario traducirlos, se pueden descargar en WebVTT.
++ Desde Cadet indicar colores y posicionamiento según normativa UNE
++ Descargar fichero TTML para los coloress
++ Descargar fichero WebVTT para el posicionamiento. + Si es necesario, retocar según indicaciones de [Jason Ronallo](https://ronallo.com/demos/webvtt-cue-settings/)
++ Subir nuevas versiones a YouTube
+	+ Avisa de que hay errores, pero seguimos adelante
+	+ Una vez publicados, revisar resultados
+
+---
+## Esquema de Trabajo audiodescripción(1)
+
+Audiodescripción
+
++ Hacer guion de la Audiodescripción (mirar espacios y contenido)
++ A partir del fichero de subtitulado con los tiempos ajustados… en CADET subir vídeo y fichero subtítulos
+	+ Tools – Convert to description
+	+ Nos da el tiempo en el que incluir la Audiodescripción
++ Incluir el texto y revisar
+
+A partir del fichero resultante con tiempos, podemos crear Audiodescripcion con tiempo o tenemos un guion para un locutor.
+
+---
+## A tener en cuenta
+
+La vía más efectiva para influir subtítulos y audiodescripciones es desde la planificación del vídeo
+
+A menudo la Audiodescripción se solventa creando dos versiones del mismo vídeo: una con la banda sonora adicional de la Audiodescripción.
+
+Hay reproductores profesionales que nos permitirán usar los ficheros WebVTT o TTML al completo con colores y posicionamiento.
+
+El mundo del vídeo en la web evoluciona constantemente. El estándar HTML incorporar etiquetas para subtítulos, audiodescripciones, secciones en el vídeo (capítulos), que poco a poco se irán incorporando a los reproductores existentes.
 
 ---
 name:tema4 
